@@ -1,18 +1,14 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View} from "react-native";
 
-
-import ViewImageScreen from "./app/screens/ViewImageScreen";
-import WelcomeScreen from "./app/screens/WelcomeScreen";
-import AppText from "./app/components/AppText"
-import AppButton from './app/components/AppButton'
-import colors from './app/config/colors'
-import Card from './app/components/Card'
-import PostingDetailsScreen from './app/screens/PostingDetailsScreen';
 import MessagesScreen from "./app/screens/MessagesScreen";
-
+import WelcomeScreen from './app/screens/WelcomeScreen'
+import PostsScreen from "./app/screens/PostsScreen";
+import Screen from './app/components/Screen';
+import Icon from './app/components/Icon';
 export default function App() {
-  return <MessagesScreen/>
+  return <PostsScreen/>
+  
 
   
 }

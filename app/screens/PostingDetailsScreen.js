@@ -13,7 +13,7 @@ export default function PostingDetailsScreen() {
     <View>
       <Image
         style={styles.image}
-        source={require("../assets/background1.jpg")}
+        source={require("../assets/firstimage.jpg")}
       />
       <View style={styles.detailsContainer}>
         <AppText style={styles.title}>Olallie</AppText>
