@@ -7,7 +7,7 @@ import PostsScreen from "./app/screens/PostsScreen";
 import Screen from './app/components/Screen';
 import Icon from './app/components/Icon';
 export default function App() {
-  return <PostsScreen/>
+  return <WelcomeScreen/>
   
 
   
