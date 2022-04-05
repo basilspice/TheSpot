@@ -18,6 +18,7 @@ export default function Post({ title, location, image }) {
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
+    padding: 15,
   },
   location: {
       color: colors.medium 
