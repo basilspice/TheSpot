@@ -3,15 +3,9 @@ import { View, StyleSheet, Image } from "react-native";
 import AppText from "./AppText";
 import colors from "../config/colors";
 import { TouchableHighlight } from "react-native";
-import Swipeable  from "react-native-gesture-handler/Swipeable";
+import Swipeable from "react-native-gesture-handler/Swipeable";
 
-function Post({
-  title,
-  location,
-  image,
-  onPress,
-  renderRightActions,
-}) {
+function Post({ title, location, image, onPress, renderRightActions }) {
   return (
     <Swipeable renderRightActions={renderRightActions}>
       <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
