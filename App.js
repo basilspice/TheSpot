@@ -8,16 +8,11 @@ import AppText from "./app/components/AppText"
 import AppButton from './app/components/AppButton'
 import colors from './app/config/colors'
 import Card from './app/components/Card'
+import PostingDetailsScreen from './app/screens/PostingDetailsScreen';
 
 export default function App() {
-  return <View style={{
-    backgroundColor: '#f8f4f4',
-    padding: 20,
-    paddingTop: 100,
+  return <PostingDetailsScreen />
 
-  }}><Card
-  title="Olallie"
-  location="Washington"
-  image={require("./app/assets/background1.jpg")}
-  /></View>
+
+  
 }

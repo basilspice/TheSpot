@@ -2,5 +2,6 @@ export default {
     primary: 'darkslategray',
     secondary: 'lightslategray',
     black: '#000',
-    white: '#fff'
+    white: '#fff',
+    medium: '#6e6969'
 }
