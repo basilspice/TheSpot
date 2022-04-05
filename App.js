@@ -9,10 +9,10 @@ import AppButton from './app/components/AppButton'
 import colors from './app/config/colors'
 import Card from './app/components/Card'
 import PostingDetailsScreen from './app/screens/PostingDetailsScreen';
+import MessagesScreen from "./app/screens/MessagesScreen";
 
 export default function App() {
-  return <PostingDetailsScreen />
-
+  return <MessagesScreen/>
 
   
 }
