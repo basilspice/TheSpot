@@ -14,7 +14,7 @@ export default function PostingDetailsScreen() {
         source={require("../assets/drytop.jpg")}
       />
       <View style={styles.detailsContainer}>
-        <AppText style={styles.title}>Olallie</AppText>
+        <AppText style={styles.title}>Joyce</AppText>
         <AppText style={styles.location}>Washington</AppText>
         <View style={styles.userContainer}>
           <Post
