@@ -25,9 +25,12 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     padding: 15,
+    marginRight: 70
   },
   location: {
     color: colors.medium,
+    flexWrap: 'wrap',
+    
   },
   image: {
     width: 70,

@@ -1,24 +1,28 @@
 import React from "react";
 import { Image, StyleSheet, View } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { TouchableHighlight } from "react-native-gesture-handler";
+import colors from '../config/colors'
 
-function ViewImageScreen(props) {
+function ViewImageScreen(props, onPress) {
   return (
     <View style={styles.container}>
       <View style={styles.closeIcon}>
-        <MaterialCommunityIcons name="close" color="white" size={30} />
+        <MaterialCommunityIcons name="email" color="white" size={30} />
       </View>
-      <View style={styles.deleteIcon}>
+      <View style={styles.starIcon}>
+      <TouchableHighlight underlayColor={colors.gold} onPress={onPress}>
         <MaterialCommunityIcons
-          name="trash-can-outline"
-          color="white"
+          name="star"
           size={35}
+          color={colors.light}
         />
+        </TouchableHighlight>
       </View>
       <Image
         resizeMode="contain"
         style={styles.image}
-        source={require("../assets/firstspot.jpg")}
+        source={require("../assets/drytop.jpg")}
       />
     </View>
   );
@@ -26,12 +30,12 @@ function ViewImageScreen(props) {
 const styles = StyleSheet.create({
   closeIcon: {
     position: "absolute",
-    top: 40,
+    top: 55,
     left: 30,
   },
-  deleteIcon: {
+  starIcon: {
     position: "absolute",
-    top: 40,
+    top: 50,
     right: 30,
   },
   container: {

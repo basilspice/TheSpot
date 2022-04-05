@@ -7,39 +7,39 @@ import colors from "../config/colors";
 const listings = [
   {
     id: 1,
+    title: "Dry Hill/PA",
+    location: "Washington",
+    image: require("../assets/drytop.jpg"),
+  },
+  {
+    id: 2,
+    title: "Silver",
+    location: "Idaho",
+    image: require("../assets/silver.jpg"),
+  },
+  {
+    id: 3,
     title: "Olallie",
     location: "Washington",
     image: require("../assets/firstimage.jpg"),
   },
   {
-    id: 2,
+    id: 4,
     title: "Locals Only",
     location: "Oregon",
     image: require("../assets/firstspot.jpg"),
   },
   {
-    id: 3,
-    title: "Silver River",
-    location: "Idaho",
-    image: require("../assets/silver.jpg"),
-  },
-  {
-    id: 4,
+    id: 5,
     title: "Bachelor",
     location: "Oregon",
     image: require("../assets/bachelor.jpg"),
   },
   {
-    id: 5,
+    id: 6,
     title: "White Salmon/Little MOAB",
     location: "Oregon",
     image: require("../assets/whitesalmon.jpeg"),
-  },
-  {
-    id: 6,
-    title: "Dry Hill/PA",
-    location: "Washington",
-    image: require("../assets/drytop.jpg"),
   },
   {
     id: 7,

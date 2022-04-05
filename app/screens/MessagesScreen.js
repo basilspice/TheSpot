@@ -10,14 +10,20 @@ import Swipeable from "react-native-gesture-handler/Swipeable";
 const messages = [
   {
     id: 1,
-    title: "Bro, where is Locals Only at?",
-    description: "<F>",
+    title: "<F>",
+    description: "Bro, where is locals only at im trying to blow that place up on strava",
     image: require("../assets/basil.jpg"),
   },
   {
     id: 2,
-    title: "Hero Dirt?",
-    description: "Nice",
+    title: "Hero Dirt!",
+    description: "I think we should go ride some bicycles",
+    image: require("../assets/basil.jpg"),
+  },
+  {
+    id: 3,
+    title: "Secret Trails",
+    description: "Im telling the government, forest services, biden, evergreen and your mother",
     image: require("../assets/basil.jpg"),
   },
 ];
@@ -33,7 +39,7 @@ function MessagesScreen(props) {
             title={item.title}
             location={item.description}
             image={item.image}
-            onPress={() => console.log("Message Selected", item)}
+            onPress={() => console.log(item)}
             //swipe right to show delete button
             renderRightActions={ListItemDeleteAction}
           />
