@@ -117,18 +117,6 @@ Comments (V2)
 | /post/:postId/comment/:commentId | PATCH           |    update            | update a comment  |
 | /post/:postId/comment/:commentId | DELETE        |    destroy            | destroy a single comment |
 
-| Component   | Priority | Estimated Time |	Actual Time    |
-|-------------|----------|----------------|----------------|
-|Schemas      |	H        |	1hr           |                |
-|backend stucture  |	H        |	4hr           |                |
-|backend crud/testing  |	H        |	4hr           |                |
-|client crud  |	H        |	8hr           |                |
-|client route |	H        |	2hr           |                |
-|feed         |	H        |	2hr           |                |
-|new post     |	H        |	6hr           |                |
-|header/footer|	H        |	2hr           |                |
-|style        |	M        |	6hr           |                |
-|Total	      | H	     |  34hr	      |                |
 
 ## Additional Libraries
 Use this section to list all supporting libraries and thier role in the project. -->
