@@ -6,6 +6,8 @@
 
 The Spot
 
+
+
 A full stack app that uses React Native and Django as a back end. Users will be able to create an account and upload pictures of their 'spots' (biking, skiing, hiking, camping, etc). When posting Users will be able to Name their Spot, Select State, It will auto fill the date. Post MVP will have interactions between users with comments and messages
 
 ## user stories
