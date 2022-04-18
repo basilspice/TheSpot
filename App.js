@@ -59,20 +59,15 @@
 //   );
 // }
 
+import React, { useState } from "react";
+import LoginScreen from "./app/screens/LoginScreen";
 
-import React, {useState} from 'react';
-import {Switch} from 'react-native';
-import Screen from './app/components/Screen';
-import AppPicker from './app/components/AppPicker';
-import AppTextInput from './app/components/AppTextInput';
+
 
 export default function App() {
-  
-  
-  return <Screen>
-<AppPicker icon='apps' placeholder='Category' />
-<AppTextInput icon='email' placeholder='Email'/>
 
 
-  </Screen>;
+  return (
+<LoginScreen/>
+  );
 }
