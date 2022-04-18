@@ -7,5 +7,5 @@ colors,
 text :{
     color: colors.dark,
     fontSize: 18,
-    fontFamily: Platform.OS === "adroid" ? "Roboto" : " Avenir",
+   
 }}
