@@ -1,18 +1,22 @@
 import React from "react";
 import { View, StyleSheet, Image } from "react-native";
+import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 
 import colors from "../config/colors";
 import AppText from "./AppText";
 
-function Card({ title, location, image }) {
+function Card({ title, state, imageUrl, onPress }) {
   return (
-    <View style={styles.card}>
-      <Image style={styles.image} source={image} />
+    
+    <TouchableWithoutFeedback onPress={onPress}>
+      <View style={styles.card}>
+      <Image style={styles.image} source={{uri: imageUrl}} />
       <View style={styles.detailsContainer}>
         <AppText style={styles.title}>{title}</AppText>
-        <AppText style={styles.location}>{location}</AppText>
+        <AppText style={styles.state}>{state}</AppText>
       </View>
     </View>
+    </TouchableWithoutFeedback>
   );
 }
 const styles = StyleSheet.create({
@@ -33,7 +37,7 @@ const styles = StyleSheet.create({
   title: {
     marginBottom: 7,
   },
-  location: {
+  state: {
     color: colors.secondary,
     fontWeight: "bold",
   },

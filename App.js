@@ -2,7 +2,7 @@
 // import { StyleSheet, Text, View} from "react-native";
 
 // import MessagesScreen from "./app/screens/MessagesScreen";
-// import WelcomeScreen from './app/screens/WelcomeScreen'
+ import WelcomeScreen from './app/screens/WelcomeScreen'
 // import PostsScreen from "./app/screens/PostsScreen";
 // import PostingDetailsScreen from "./app/screens/PostingDetailsScreen";
 // import Screen from './app/components/Screen';
@@ -59,8 +59,14 @@
 //   );
 // }
 
-import React, { useState } from "react";
-import LoginScreen from "./app/screens/LoginScreen";
+import React from "react";
+import {Text} from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import Screen from './app/components/Screen'
+import AuthNavigator from './app/navigation/AuthNavigator';
+import NavigationTheme from './app/navigation/NavigationTheme';
+import AppNavigator from './app/navigation/AppNavigator';
 
 
 
@@ -68,6 +74,8 @@ export default function App() {
 
 
   return (
-<LoginScreen/>
+<NavigationContainer theme={NavigationTheme}>
+  <AppNavigator/>
+</NavigationContainer>
   );
 }
