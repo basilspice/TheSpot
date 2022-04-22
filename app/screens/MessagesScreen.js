@@ -1,17 +1,19 @@
-import React from "react";
-import { FlatList } from "react-native";
-import { StyleSheet, View } from "react-native";
-import ListItemDeleteAction from "../components/ListItemDeleteAction";
-import ListItemSeparator from "../components/ListItemSeparator";
-import Post from "../components/Post";
+import React, { useState } from "react";
+import { FlatList, StyleSheet, View } from "react-native";
 
 import Screen from "../components/Screen";
-import Swipeable from "react-native-gesture-handler/Swipeable";
-const messages = [
+import {
+  ListItem,
+  ListItemDeleteAction,
+  ListItemSeparator,
+} from "../components/lists";
+
+const initialMessages = [
   {
     id: 1,
     title: "<F>",
-    description: "Bro, where is locals only at im trying to blow that place up on strava",
+    description:
+      "Bro, where is locals only at im trying to blow that place up on strava",
     image: require("../assets/basil.jpg"),
   },
   {
@@ -23,29 +25,49 @@ const messages = [
   {
     id: 3,
     title: "Secret Trails",
-    description: "Im telling the government, forest services, biden, evergreen and your mother",
-    image: require("../assets/basil.jpg"),
+    description:
+      "Im telling the government, forest services, biden, evergreen and your mother",
+    image: require("../assets/mosh.jpg"),
   },
 ];
 
 function MessagesScreen(props) {
+  const [messages, setMessages] = useState(initialMessages);
+  const [refreshing, setRefreshing] = useState(false);
+
+  const handleDelete = (message) => {
+    // Delete the message from messages
+    setMessages(messages.filter((m) => m.id !== message.id));
+  };
+
   return (
     <Screen>
       <FlatList
         data={messages}
         keyExtractor={(message) => message.id.toString()}
         renderItem={({ item }) => (
-          <Post
+          <ListItem
             title={item.title}
-            location={item.description}
+            subTitle={item.description}
             image={item.image}
-            onPress={() => console.log(item)}
-            //swipe right to show delete button
-            renderRightActions={ListItemDeleteAction}
+            onPress={() => console.log("Message selected", item)}
+            renderRightActions={() => (
+              <ListItemDeleteAction onPress={() => handleDelete(item)} />
+            )}
           />
         )}
         ItemSeparatorComponent={ListItemSeparator}
-        
+        refreshing={refreshing}
+        onRefresh={() => {
+          setMessages([
+            {
+              id: 2,
+              title: "T2",
+              description: "D2",
+              image: require("../assets/basil.jpg"),
+            },
+          ]);
+        }}
       />
     </Screen>
   );
