@@ -17,7 +17,7 @@ import UploadScreen from "./UploadScreen";
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label("Title"),
-  price: Yup.string().required().min(1).label("State"),
+  state: Yup.string().required().min(2).max(2).label("State"),
   description: Yup.string().label("Description"),
   category: Yup.object().required().nullable().label("Category"),
   images: Yup.array().min(1, "Please select at least one image."),
@@ -25,34 +25,59 @@ const validationSchema = Yup.object().shape({
 
 const categories = [
   {
-    id: 1,
-    name: "Spring",
-    icon: "weather-sunset",
-    backgroundColor: "yellow",
-    color: "white"
+    backgroundColor: "#fc5c65",
+    icon: "floor-lamp",
+    label: "Furniture",
+    value: 1,
   },
   {
-    id: 2,
-    name: "Summer",
-    icon: "weather-sunny",
-    backgroundColor: "blue",
-    color: "white"
+    backgroundColor: "#fd9644",
+    icon: "car",
+    label: "Cars",
+    value: 2,
   },
   {
-    id: 3,
-    name: "Fall",
-    icon: "leaf-maple",
-    backgroundColor: "darkred",
-    color: "white"
+    backgroundColor: "#fed330",
+    icon: "camera",
+    label: "Cameras",
+    value: 3,
   },
   {
-    id: 4,
-    name: "Winter",
-    icon: "snowflake",
-    backgroundColor: "grey",
-    color: "white"
-  }
-
+    backgroundColor: "#26de81",
+    icon: "cards",
+    label: "Games",
+    value: 4,
+  },
+  {
+    backgroundColor: "#2bcbba",
+    icon: "shoe-heel",
+    label: "Clothing",
+    value: 5,
+  },
+  {
+    backgroundColor: "#45aaf2",
+    icon: "basketball",
+    label: "Sports",
+    value: 6,
+  },
+  {
+    backgroundColor: "#4b7bec",
+    icon: "headphones",
+    label: "Movies & Music",
+    value: 7,
+  },
+  {
+    backgroundColor: "#a55eea",
+    icon: "book-open-variant",
+    label: "Books",
+    value: 8,
+  },
+  {
+    backgroundColor: "#778ca3",
+    icon: "application",
+    label: "Other",
+    value: 9,
+  },
 ];
 
 function ListingEditScreen() {

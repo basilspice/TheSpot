@@ -6,10 +6,7 @@ import colors from "../config/colors";
 import Icon from "../components/Icon";
 import routes from "../navigation/routes";
 import Screen from "../components/Screen";
-import { useContext } from "react/cjs/react.development";
-import AuthContext from "../auth/context";
-import { UserInterfaceIdiom } from "expo-constants";
-import storage from '../auth/storage'
+import useAuth from "../auth/useAuth";
 
 const menuItems = [
   {
@@ -30,12 +27,8 @@ const menuItems = [
 ];
 
 function AccountScreen({ navigation }) {
-  const {user, setUser} = useContext(AuthContext)
-  const handleLogout = () => {
-    setUser(null);
-    storage.removeToken();
-  }
-  
+  const { user, logOut } = useAuth();
+
   return (
     <Screen style={styles.screen}>
       <View style={styles.container}>
@@ -67,7 +60,7 @@ function AccountScreen({ navigation }) {
       <ListItem
         title="Log Out"
         IconComponent={<Icon name="logout" backgroundColor="#ffe66d" />}
-        onPress={handleLogout}
+        onPress={() => logOut()}
       />
     </Screen>
   );
