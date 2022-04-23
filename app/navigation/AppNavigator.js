@@ -20,6 +20,7 @@ const AppNavigator = () => {
       <Tab.Screen
         name="Feed"
         component={FeedNavigator}
+        screenOptions={{ headerShown: false }}
         options={{
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="home" color={color} size={size} />

@@ -25,7 +25,6 @@ function ListingDetailsScreen({ route }) {
       <Image
         style={styles.image}
         preview={{ uri: listing.images[0].thumbnailUrl }}
-        tint="light"
         uri={listing.images[0].url}
       />
       <View style={styles.detailsContainer}>

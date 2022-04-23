@@ -27,7 +27,7 @@ const initialMessages = [
     title: "Secret Trails",
     description:
       "Im telling the government, forest services, biden, evergreen and your mother",
-    image: require("../assets/mosh.jpg"),
+    image: require("../assets/basil.jpg"),
   },
 ];
 
@@ -64,7 +64,7 @@ function MessagesScreen(props) {
               id: 2,
               title: "T2",
               description: "D2",
-              image: require("../assets/mosh.jpg"),
+              image: require("../assets/basil.jpg"),
             },
           ]);
         }}

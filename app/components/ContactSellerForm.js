@@ -21,7 +21,7 @@ function ContactSellerForm({ listing }) {
 
     Notifications.presentLocalNotificationAsync({
       title: "Awesome!",
-      body: "Your message was sent to the seller.",
+      body: "Your message was sent to the person.",
     });
   };
 
@@ -31,14 +31,8 @@ function ContactSellerForm({ listing }) {
       onSubmit={handleSubmit}
       validationSchema={validationSchema}
     >
-      <FormField
-        maxLength={255}
-        multiline
-        name="message"
-        numberOfLines={3}
-        placeholder="Message..."
-      />
-      <SubmitButton title="Contact Seller" />
+     
+      <SubmitButton title="Nice" />
     </Form>
   );
 }

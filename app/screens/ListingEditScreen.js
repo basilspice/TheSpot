@@ -25,58 +25,28 @@ const validationSchema = Yup.object().shape({
 
 const categories = [
   {
-    backgroundColor: "#fc5c65",
-    icon: "floor-lamp",
-    label: "Furniture",
+    backgroundColor: "grey",
+    icon: "snowflake",
+    label: "Winter",
     value: 1,
   },
   {
-    backgroundColor: "#fd9644",
-    icon: "car",
-    label: "Cars",
+    backgroundColor: "darkred",
+    icon: "leaf-maple",
+    label: "Fall",
     value: 2,
   },
   {
-    backgroundColor: "#fed330",
-    icon: "camera",
-    label: "Cameras",
+    backgroundColor: "yellow",
+    icon: "weather-sunset",
+    label: "Spring",
     value: 3,
   },
   {
-    backgroundColor: "#26de81",
-    icon: "cards",
-    label: "Games",
+    backgroundColor: "blue",
+    icon: "weather-sunny",
+    label: "Summer",
     value: 4,
-  },
-  {
-    backgroundColor: "#2bcbba",
-    icon: "shoe-heel",
-    label: "Clothing",
-    value: 5,
-  },
-  {
-    backgroundColor: "#45aaf2",
-    icon: "basketball",
-    label: "Sports",
-    value: 6,
-  },
-  {
-    backgroundColor: "#4b7bec",
-    icon: "headphones",
-    label: "Movies & Music",
-    value: 7,
-  },
-  {
-    backgroundColor: "#a55eea",
-    icon: "book-open-variant",
-    label: "Books",
-    value: 8,
-  },
-  {
-    backgroundColor: "#778ca3",
-    icon: "application",
-    label: "Other",
-    value: 9,
   },
 ];
 
@@ -113,7 +83,7 @@ function ListingEditScreen() {
           title: "",
           state: "",
           description: "",
-          category: null,
+          season: null,
           images: [],
         }}
         onSubmit={handleSubmit}
@@ -121,18 +91,13 @@ function ListingEditScreen() {
       >
         <FormImagePicker name="images" />
         <FormField maxLength={255} name="title" placeholder="Title" />
-        <FormField
-          maxLength={8}
-          name="state"
-          placeholder="State"
-          width={120}
-        />
+        <FormField maxLength={8} name="state" placeholder="State" width={120} />
         <Picker
           items={categories}
           name="category"
-          numberOfColumns={3}
+          numberOfColumns={2}
           PickerItemComponent={CategoryPickerItem}
-          placeholder="Category"
+          placeholder="Season"
           width="50%"
         />
         <FormField
