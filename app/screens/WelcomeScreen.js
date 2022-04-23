@@ -13,7 +13,7 @@ function WelcomeScreen({navigation}) {
     >
       <Image style={styles.logo} source={require("../assets/logo.png")} />
       <View style={styles.buttonsContainer}>
-        <AppButton title="Skip Login" color={colors.secondary} onPress={() => navigation.navigate("Skip Login")} />
+        <AppButton title="Skip Login" color={colors.secondary} onPress={() => navigation.navigate("ListingsDetails")} />
         <AppButton title="Login" onPress={() => navigation.navigate("Login")} />
         <AppButton title="Register" color="secondary" onPress={() => navigation.navigate("Register")} />
       </View>
