@@ -2,9 +2,19 @@ import { create } from "apisauce";
 import cache from "../utility/cache";
 import authStorage from "../auth/storage";
 
+
+//Production
 const apiClient = create({
-  baseURL: "http://192.168.1.8:9000/api",
+  baseURL: "https://mighty-lake-33739.herokuapp.com/api",
 });
+
+
+//Development
+// const apiClient = create({
+//   baseURL: "http://192.168.1.8:19000/api",
+// });
+
+
 
 apiClient.addAsyncRequestTransform(async (request) => {
   const authToken = await authStorage.getToken();
