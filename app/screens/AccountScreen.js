@@ -10,13 +10,6 @@ import useAuth from "../auth/useAuth";
 
 const menuItems = [
   {
-    title: "My Listings",
-    icon: {
-      name: "format-list-bulleted",
-      backgroundColor: colors.primary,
-    },
-  },
-  {
     title: "My Messages",
     icon: {
       name: "email",
@@ -52,7 +45,7 @@ function AccountScreen({ navigation }) {
                   backgroundColor={item.icon.backgroundColor}
                 />
               }
-              // onPress={() => navigation.navigate(item.targetScreen)}
+              onPress={() => navigation.navigate(item.targetScreen)}
             />
           )}
         />
