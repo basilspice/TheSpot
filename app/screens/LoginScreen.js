@@ -70,8 +70,8 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   logo: {
-    width: 80,
-    height: 80,
+    width: 150,
+    height: 200,
     alignSelf: "center",
     marginTop: 50,
     marginBottom: 20,
