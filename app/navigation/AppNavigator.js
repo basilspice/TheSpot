@@ -16,7 +16,7 @@ const AppNavigator = () => {
   useNotifications();
 
   return (
-    <Tab.Navigator>
+    <Tab.Navigator screenOptions={{ headerShown: false }}>
       <Tab.Screen
         name="Feed"
         component={FeedNavigator}
@@ -29,6 +29,7 @@ const AppNavigator = () => {
       />
       <Tab.Screen
         name="ListingEdit"
+        
         component={ListingEditScreen}
         options={({ navigation }) => ({
           tabBarButton: () => (

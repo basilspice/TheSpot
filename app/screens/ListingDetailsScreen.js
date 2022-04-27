@@ -23,7 +23,7 @@ function ListingDetailsScreen({ route }) {
       keyboardVerticalOffset={Platform.OS === "ios" ? 0 : 100}
     >
       <Image
-        
+        blurRadius={0}
         style={styles.image}
         preview={{ uri: listing.images[0].thumbnailUrl }}
         uri={listing.images[0].url}
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   image: {
-    blurRadius: 0,
+    
     width: "100%",
     height: 300,
   },

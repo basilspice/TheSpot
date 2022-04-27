@@ -2,20 +2,22 @@ import React from "react";
 import { ImageBackground, StyleSheet, View, Image, Text } from "react-native";
 
 import Button from "../components/Button";
-import colors from '../config/colors'
+import colors from "../config/colors";
 import routes from "../navigation/routes";
-function WelcomeScreen({navigation}) {
+function WelcomeScreen({ navigation }) {
   return (
     <ImageBackground
-      
+      blurRadius={0}
       style={styles.background}
       source={require("../assets/background.jpg")}
     >
       <Image style={styles.logo} source={require("../assets/logo.png")} />
       <View style={styles.buttonsContainer}>
-      <Button title="Skip Login" color={colors.secondary} 
-      // onPress={() => navigation.navigate(routes.LISTING_DETAILS)}
-       />
+        <Button
+          title="Skip Login"
+          color={colors.secondary}
+          // onPress={() => navigation.navigate(routes.LISTING_DETAILS)}
+        />
         <Button
           title="Login"
           onPress={() => navigation.navigate(routes.LOGIN)}
@@ -31,7 +33,6 @@ function WelcomeScreen({navigation}) {
 }
 const styles = StyleSheet.create({
   background: {
-    blurRadius: 0,
     flex: 1,
     justifyContent: "flex-end",
     alignItems: "center",
