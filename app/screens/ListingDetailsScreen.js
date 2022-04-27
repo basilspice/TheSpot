@@ -23,6 +23,7 @@ function ListingDetailsScreen({ route }) {
       keyboardVerticalOffset={Platform.OS === "ios" ? 0 : 100}
     >
       <Image
+        
         style={styles.image}
         preview={{ uri: listing.images[0].thumbnailUrl }}
         uri={listing.images[0].url}
@@ -30,6 +31,7 @@ function ListingDetailsScreen({ route }) {
       <View style={styles.detailsContainer}>
         <Text style={styles.title}>{listing.title}</Text>
         <Text style={styles.price}>{listing.state}</Text>
+        <Text style={styles.price}>{listing.description}</Text>
         <View style={styles.userContainer}>
           <ListItem
             image={require("../assets/basil.jpg")}
@@ -48,6 +50,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   image: {
+    blurRadius: 0,
     width: "100%",
     height: 300,
   },

@@ -20,13 +20,15 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.basilspice.thespot",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./app/assets/logo.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
-      "favicon": "./app/assets/favicon.png"
+      "favicon": "./app/assets/logo.png"
     },
     "description": "",
     "githubUrl": "https://github.com/basilspice/TheSpot"

@@ -2,12 +2,12 @@ import React from "react";
 import { ImageBackground, StyleSheet, View, Image, Text } from "react-native";
 
 import Button from "../components/Button";
-import routes from "../navigation/routes";
 import colors from '../config/colors'
+import routes from "../navigation/routes";
 function WelcomeScreen({navigation}) {
   return (
     <ImageBackground
-      blurRadius={0}
+      
       style={styles.background}
       source={require("../assets/background.jpg")}
     >
@@ -31,6 +31,7 @@ function WelcomeScreen({navigation}) {
 }
 const styles = StyleSheet.create({
   background: {
+    blurRadius: 0,
     flex: 1,
     justifyContent: "flex-end",
     alignItems: "center",
