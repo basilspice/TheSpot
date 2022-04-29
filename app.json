@@ -2,7 +2,7 @@
   "expo": {
     "name": "TheSpot",
     "slug": "TheSpot",
-    "version": "1.0.2",
+    "version": "1.0.5",
     "orientation": "portrait",
     "icon": "./app/assets/icon.png",
     "splash": {
@@ -21,7 +21,7 @@
     },
     "android": {
       "package": "com.basilspice.thespot",
-      "versionCode": 4,
+      "versionCode": 5,
       "adaptiveIcon": {
         "foregroundImage": "./app/assets/logo.png",
         "backgroundColor": "#FFFFFF"

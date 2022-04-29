@@ -18,7 +18,7 @@ function ImageInput({ imageUri, onChangeImage }) {
 
   const requestPermission = async () => {
     const { granted } = await ImagePicker.getMediaLibraryPermissionsAsync();
-    if (!granted) console.log("Try Again");
+    if (!granted) alert("Select an Image");
   };
 
   const handlePress = () => {
