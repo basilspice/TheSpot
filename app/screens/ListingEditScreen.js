@@ -12,7 +12,7 @@ import CategoryPickerItem from "../components/CategoryPickerItem";
 import Screen from "../components/Screen";
 import FormImagePicker from "../components/forms/FormImagePicker";
 import listingsApi from "../api/listings";
-import useLocation from "../hooks/useLocation";
+
 import UploadScreen from "./UploadScreen";
 
 const validationSchema = Yup.object().shape({
@@ -51,7 +51,7 @@ const categories = [
 ];
 
 function ListingEditScreen() {
-  const location = useLocation();
+  
   const [uploadVisible, setUploadVisible] = useState(false);
   const [progress, setProgress] = useState(0);
 
@@ -59,7 +59,7 @@ function ListingEditScreen() {
     setProgress(0);
     setUploadVisible(true);
     const result = await listingsApi.addListing(
-      { ...listing, location },
+      { ...listing},
       (progress) => setProgress(progress)
     );
 
