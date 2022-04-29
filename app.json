@@ -2,7 +2,7 @@
   "expo": {
     "name": "TheSpot",
     "slug": "TheSpot",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "orientation": "portrait",
     "icon": "./app/assets/icon.png",
     "splash": {
@@ -21,7 +21,8 @@
     },
     "android": {
       "package": "com.basilspice.thespot",
-      "versionCode": 6,
+      "versionCode": 7,
+      "permissions": [ "CAMERA", "READ_EXTERNAL_STORAGE", "com.google.android.c2dm.permission.RECEIVE", "com.sec.android.provider.badge.permission.WRITE", "com.sec.android.provider.badge.permission.READ"  ],
       "adaptiveIcon": {
         "foregroundImage": "./app/assets/logo.png",
         "backgroundColor": "#FFFFFF"
