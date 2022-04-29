@@ -9,7 +9,7 @@ import {
 import Text from "./Text";
 import colors from "../config/colors";
 
-function Card({ title, subTitle, imageUrl, onPress }) {
+function Card({ title, state, imageUrl, onPress }) {
   return (
     <TouchableWithoutFeedback onPress={onPress}>
       <View style={styles.card}>
@@ -19,7 +19,7 @@ function Card({ title, subTitle, imageUrl, onPress }) {
             {title}
           </Text>
           <Text style={styles.subTitle} numberOfLines={2}>
-            {subTitle}
+            {state}
           </Text>
         </View>
       </View>
