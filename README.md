@@ -1,3 +1,4 @@
-## PRIVACY POLICY
+##Live Link
 
-Safety, dont be unsafe. 
+ 
+https://play.google.com/store/apps/details?id=com.basilspice.thespot
